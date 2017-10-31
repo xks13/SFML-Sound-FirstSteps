@@ -9,6 +9,6 @@ public:
     void run();
 private:
     void eventHandling();
-    sf::RenderWindow window;
-    SoundMenager menager;
+    sf::RenderWindow _window;
+    SoundMenager _menager;
 };

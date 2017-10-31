@@ -1,7 +1,7 @@
 #include "SoundMenager.hpp"
 
-#include <SFML/Audio.hpp>
 #include <iostream>
+#include <SFML/Audio.hpp>
 
 sf::Sound sound;
 sf::SoundBuffer buffer;
@@ -9,7 +9,7 @@ sf::SoundBuffer buffer;
 sf::Music music;
 
 SoundMenager::SoundMenager() {
-	
+
 	if (!music.openFromFile("res/Szczur Rozpierdalacz.ogg")) {
 		std::cout << "There is not Szczur Rozpierdalacz.ogg in res folder!" << std::endl;
 	}
