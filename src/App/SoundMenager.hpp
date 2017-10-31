@@ -1,4 +1,6 @@
-#pragma once 
+#pragma once
+ 
+#include <SFML/Audio.hpp>
 
 class SoundMenager {
 public:
@@ -7,4 +9,8 @@ public:
     void pauseSound();
     void playMusic();
     void pauseMusic();
+private:
+    sf::Sound _sound;
+    sf::SoundBuffer _buffer;
+    sf::Music _music;
 };

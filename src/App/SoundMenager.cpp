@@ -3,37 +3,32 @@
 #include <iostream>
 #include <SFML/Audio.hpp>
 
-sf::Sound sound;
-sf::SoundBuffer buffer;
-
-sf::Music music;
-
 SoundMenager::SoundMenager() {
 
-	if (!music.openFromFile("res/Szczur Rozpierdalacz.ogg")) {
+	if (!_music.openFromFile("res/Szczur Rozpierdalacz.ogg")) {
 		std::cout << "There is not Szczur Rozpierdalacz.ogg in res folder!" << std::endl;
 	}
 	
-	if (!buffer.loadFromFile("res/beep.wav")) {
+	if (!_buffer.loadFromFile("res/beep.wav")) {
 		std::cout << "There is not beep.wav in res folder!" << std::endl;
 		return;
 	}
 
-	sound.setBuffer(buffer);
+	_sound.setBuffer(_buffer);
 }
 
 void SoundMenager::playSound() {
-	sound.play(); 
+	_sound.play(); 
 }
 
 void SoundMenager::pauseSound() {
-	sound.pause(); 
+	_sound.pause(); 
 }
 
 void SoundMenager::playMusic() {
-	music.play();
+	_music.play();
 }
 
 void SoundMenager::pauseMusic() {
-	music.pause();
+	_music.pause();
 }
