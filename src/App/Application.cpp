@@ -13,10 +13,12 @@ void Application::run() {
         while (window.pollEvent(event)) {
             if (event.type == sf::Event::Closed)
                 window.close();
+            if (event.key.code == sf::Keyboard::P)
+                menager.playSound();
             if (event.key.code == sf::Keyboard::A)
-                menager.play();
+                menager.playMusic();
             if (event.key.code == sf::Keyboard::Space)
-                menager.pause();
+                menager.pauseMusic();
         }
         window.clear();
         window.display();

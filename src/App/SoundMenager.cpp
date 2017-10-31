@@ -6,19 +6,34 @@
 sf::Sound sound;
 sf::SoundBuffer buffer;
 
+sf::Music music;
+
 SoundMenager::SoundMenager() {
-	if(!buffer.loadFromFile("res/Szczur_Rozpierdalacz.wav")) {
-		std::cout << "There is not Szczur_Rozpierdalacz.wav in res folder!" << std::endl;
+	
+	if (!music.openFromFile("res/Szczur Rozpierdalacz.ogg")) {
+		std::cout << "There is not Szczur Rozpierdalacz.ogg in res folder!" << std::endl;
+	}
+	
+	if (!buffer.loadFromFile("res/beep.wav")) {
+		std::cout << "There is not beep.wav in res folder!" << std::endl;
 		return;
 	}
 
 	sound.setBuffer(buffer);
 }
 
-void SoundMenager::play() {
+void SoundMenager::playSound() {
 	sound.play(); 
 }
 
-void SoundMenager::pause() {
+void SoundMenager::pauseSound() {
 	sound.pause(); 
+}
+
+void SoundMenager::playMusic() {
+	music.play();
+}
+
+void SoundMenager::pauseMusic() {
+	music.pause();
 }

@@ -3,6 +3,8 @@
 class SoundMenager {
 public:
     SoundMenager();
-    void play();
-    void pause();
+    void playSound();
+    void pauseSound();
+    void playMusic();
+    void pauseMusic();
 };
