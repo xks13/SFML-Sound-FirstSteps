@@ -1,15 +1,16 @@
 #pragma once 
 
-#include "Audio.hpp"
 #include <SFML/Audio/Sound.hpp>
 #include <SFML/Audio/SoundBuffer.hpp>
+
+#include "Audio.hpp"
 
 class Sound : public Audio {
 public:
     bool loadFromFile(const std::string& fileName);
     void play();
     void pause();
-    void setVolume(const float&);
+    void setVolume(const float& volume);
     float getVolume() const;
 private:
     sf::Sound _sound;

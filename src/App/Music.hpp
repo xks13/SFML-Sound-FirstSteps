@@ -1,7 +1,8 @@
 #pragma once 
 
-#include "Audio.hpp"
 #include <SFML/Audio/Music.hpp>
+
+#include "Audio.hpp"
 
 class Music : public Audio {
 public:
