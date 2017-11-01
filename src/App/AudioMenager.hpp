@@ -6,7 +6,7 @@
 
 #include <map>
 
-class SoundMenager {
+class AudioMenager {
 public:
     enum class Type {
         dubbing, sound, music

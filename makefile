@@ -4,14 +4,14 @@ LIBS = -lsfml-audio -lsfml-graphics -lsfml-window -lsfml-system
 SDIR = src/App
 ODIR = obj
 
-link: $(ODIR)/main.o $(ODIR)/Application.o $(ODIR)/SoundMenager.o $(ODIR)/Music.o $(ODIR)/Sound.o
-	g++ -o out/run.exe $(ODIR)/main.o $(ODIR)/Application.o $(ODIR)/SoundMenager.o $(ODIR)/Music.o $(ODIR)/Sound.o $(LDIR) $(LIBS)
+link: $(ODIR)/main.o $(ODIR)/Application.o $(ODIR)/AudioMenager.o $(ODIR)/Music.o $(ODIR)/Sound.o
+	g++ -o out/run.exe $(ODIR)/main.o $(ODIR)/Application.o $(ODIR)/AudioMenager.o $(ODIR)/Music.o $(ODIR)/Sound.o $(LDIR) $(LIBS)
 
 $(ODIR)/Application.o: $(SDIR)/Application.cpp
 	g++ -c -std=c++11 $(SDIR)/Application.cpp -o $(ODIR)/Application.o $(IDIR)
 
-$(ODIR)/SoundMenager.o: $(SDIR)/SoundMenager.cpp
-	g++ -c -std=c++11 $(SDIR)/SoundMenager.cpp -o $(ODIR)/SoundMenager.o $(IDIR)
+$(ODIR)/AudioMenager.o: $(SDIR)/AudioMenager.cpp
+	g++ -c -std=c++11 $(SDIR)/AudioMenager.cpp -o $(ODIR)/AudioMenager.o $(IDIR)
 
 $(ODIR)/Music.o: $(SDIR)/Music.cpp
 	g++ -c -std=c++11 $(SDIR)/Music.cpp -o $(ODIR)/Music.o $(IDIR)

@@ -1,7 +1,7 @@
-#include "SoundMenager.hpp"
+#include "AudioMenager.hpp"
 
 
-Audio* SoundMenager::operator()(Type type, std::string fileName) {
+Audio* AudioMenager::operator()(Type type, std::string fileName) {
 	if (!active.count(fileName)) {
 		active[fileName] = getCorectType(type);
 		active[fileName]->loadFromFile(fileName);
@@ -9,7 +9,7 @@ Audio* SoundMenager::operator()(Type type, std::string fileName) {
 	return active[fileName];
 }
 
-Audio* SoundMenager::getCorectType(Type type) {
+Audio* AudioMenager::getCorectType(Type type) {
 	switch (type) {
 		case Type::dubbing:
 		case Type::sound:

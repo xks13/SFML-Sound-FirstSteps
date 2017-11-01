@@ -1,5 +1,4 @@
 #include "Application.hpp"
-#include "SoundMenager.hpp"
 
 Application::Application() {
     _window.create(sf::VideoMode(1280, 720), "Window");
@@ -19,10 +18,10 @@ void Application::eventHandling() {
         if (event.type == sf::Event::Closed)
             _window.close();
         if (event.key.code == sf::Keyboard::P)
-            (_menager(SoundMenager::Type::sound, "beep"))->play();
+            (_menager(AudioMenager::Type::sound, "beep"))->play();
         if (event.key.code == sf::Keyboard::A)
-            (_menager(SoundMenager::Type::music, "Szczur Rozpierdalacz"))->play();
+            (_menager(AudioMenager::Type::music, "Szczur Rozpierdalacz"))->play();
         if (event.key.code == sf::Keyboard::Space)
-            (_menager(SoundMenager::Type::music, "Szczur Rozpierdalacz"))->pause();
+            (_menager(AudioMenager::Type::music, "Szczur Rozpierdalacz"))->pause();
     }
 }

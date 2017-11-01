@@ -1,7 +1,7 @@
 #pragma once
 
 #include <SFML/Graphics.hpp>
-#include "SoundMenager.hpp"
+#include "AudioMenager.hpp"
 
 class Application {
 public:
@@ -10,5 +10,5 @@ public:
 private:
     void eventHandling();
     sf::RenderWindow _window;
-    SoundMenager _menager;
+    AudioMenager _menager;
 };
