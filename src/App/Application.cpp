@@ -17,8 +17,10 @@ void Application::eventHandling() {
     while (_window.pollEvent(event)) {
         if (event.type == sf::Event::Closed)
             _window.close();
-        if (event.key.code == sf::Keyboard::P)
+        if (event.key.code == sf::Keyboard::S)
             _menager(AudioMenager::Type::sound, "beep")->play();
+        if (event.key.code == sf::Keyboard::D)
+            _menager(AudioMenager::Type::dubbing, "Pora umierac")->play();
         if (event.key.code == sf::Keyboard::A)
             _menager(AudioMenager::Type::music, "Szczur Rozpierdalacz")->play();
         if (event.key.code == sf::Keyboard::Space)

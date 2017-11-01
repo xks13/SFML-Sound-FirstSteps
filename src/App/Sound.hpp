@@ -12,7 +12,7 @@ public:
     void pause();
     void setVolume(const float& volume);
     float getVolume() const;
-private:
+protected:
     sf::Sound _sound;
     sf::SoundBuffer _buffer;
 };

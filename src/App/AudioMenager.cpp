@@ -12,6 +12,7 @@ Audio* AudioMenager::operator()(Type type, std::string fileName) {
 Audio* AudioMenager::getCorectType(Type type) {
 	switch (type) {
 		case Type::dubbing:
+			return new Dubbing;
 		case Type::sound:
 			return new Sound;
 		case Type::music:
