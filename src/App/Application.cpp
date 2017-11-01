@@ -18,10 +18,10 @@ void Application::eventHandling() {
         if (event.type == sf::Event::Closed)
             _window.close();
         if (event.key.code == sf::Keyboard::P)
-            (_menager(AudioMenager::Type::sound, "beep"))->play();
+            _menager(AudioMenager::Type::sound, "beep")->play();
         if (event.key.code == sf::Keyboard::A)
-            (_menager(AudioMenager::Type::music, "Szczur Rozpierdalacz"))->play();
+            _menager(AudioMenager::Type::music, "Szczur Rozpierdalacz")->play();
         if (event.key.code == sf::Keyboard::Space)
-            (_menager(AudioMenager::Type::music, "Szczur Rozpierdalacz"))->pause();
+            _menager(AudioMenager::Type::music, "Szczur Rozpierdalacz")->pause();
     }
 }
