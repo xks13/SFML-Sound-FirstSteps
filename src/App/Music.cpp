@@ -1,6 +1,7 @@
 #include "Music.hpp"
 
-bool Music::loadFromFile(std::string path) {
+bool Music::loadFromFile(const std::string& fileName) {
+    std::string path = "res/Music/" + fileName + ".ogg";
     return _music.openFromFile(path);
 }
 
@@ -10,4 +11,12 @@ void Music::play() {
 
 void Music::pause() {
     _music.pause();
+}
+
+void Music::setVolume(const float& volume) {
+    _music.setVolume(volume);
+}
+
+float Music::getVolume() const {
+    return _music.getVolume();
 }

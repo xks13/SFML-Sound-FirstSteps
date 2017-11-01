@@ -1,16 +1,18 @@
 #pragma once
 
-#include "Music.hpp"
+#include "Audio.hpp"
 #include "Sound.hpp"
+#include "Music.hpp"
+
+#include <map>
 
 class SoundMenager {
 public:
-    SoundMenager();
-    void playSound();
-    void pauseSound();
-    void playMusic();
-    void pauseMusic();
+    enum class Type {
+        dubbing, sound, music
+    };
+    Audio* operator()(Type type, std::string fileName);
 private:
-    Sound _sound;
-    Music _music;
+    Audio* getCorectType(Type type);
+    std::map<std::string, Audio*> active;
 };
