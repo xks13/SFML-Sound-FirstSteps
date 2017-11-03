@@ -22,5 +22,5 @@ private:
     //returns pointer to correct class of audio
     Audio* getCorectType(Type type);
     //map of all active audio obiects
-    std::map<std::string, Audio*> active;
+    std::map<std::string, Audio*> _active;
 };

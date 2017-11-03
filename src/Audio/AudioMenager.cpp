@@ -2,11 +2,11 @@
 
 
 Audio* AudioMenager::operator()(Type type, std::string fileName) {
-	if (!active.count(fileName)) {
-		active[fileName] = getCorectType(type);
-		active[fileName]->loadFromFile(fileName);
+	if (!_active.count(fileName)) {
+		_active[fileName] = getCorectType(type);
+		_active[fileName]->loadFromFile(fileName);
 	}
-	return active[fileName];
+	return _active[fileName];
 }
 
 Audio* AudioMenager::getCorectType(Type type) {

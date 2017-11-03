@@ -1,3 +1,5 @@
 
 \.vscode/
 \obj/
+src/Demo/Gui/glfw/
+src/Demo/Gui/imgui/
