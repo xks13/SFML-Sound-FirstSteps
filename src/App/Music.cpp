@@ -1,7 +1,7 @@
 #include "Music.hpp"
 
 bool Music::loadFromFile(const std::string& fileName) {
-    std::string path = "res/Music/" + fileName + ".ogg";
+    std::string path = "res/Music/" + fileName + ".wav";
     return _music.openFromFile(path);
 }
 
