@@ -20,3 +20,7 @@ void Music::setVolume(const float& volume) {
 float Music::getVolume() const {
     return _music.getVolume();
 }
+
+void Music::setPitch(const float& pitch) {
+    _music.setPitch(pitch);
+}

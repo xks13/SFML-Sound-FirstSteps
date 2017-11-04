@@ -12,6 +12,7 @@ public:
     void pause();
     void setVolume(const float& volume);
     float getVolume() const;
+    void setPitch(const float& pitch);
 protected:
     sf::Sound _sound;
     sf::SoundBuffer _buffer;

@@ -20,6 +20,10 @@ void Application::eventHandling() {
     while (_window.pollEvent(event)) {
         if (event.type == sf::Event::Closed)
             _window.close();
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::P))
+            _menager(AudioMenager::Type::music, "Szczur Rozpierdalacz")->setPitch(1.5);
+        if (sf::Keyboard::isKeyPressed(sf::Keyboard::B))
+            _menager(AudioMenager::Type::music, "Szczur Rozpierdalacz")->setPitch(1);
     }
 
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))

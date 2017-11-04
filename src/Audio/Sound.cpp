@@ -22,3 +22,7 @@ void Sound::setVolume(const float& volume) {
 float Sound::getVolume() const {
     return _sound.getVolume();
 }
+
+void Sound::setPitch(const float& pitch) {
+    _sound.setPitch(pitch);
+}

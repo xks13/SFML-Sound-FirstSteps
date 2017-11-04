@@ -11,6 +11,7 @@ public:
     void pause();
     void setVolume(const float& volume);
     float getVolume() const;
+    void setPitch(const float& pitch);
 private:
     sf::Music _music;
 };
